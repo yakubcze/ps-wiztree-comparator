@@ -5,8 +5,10 @@ This script utilizes [WizTree](https://diskanalyzer.com/) and [WizTreeCompare](h
 
 Script is launched using the supplied "Run_WizTreeComparator.bat" file, which ensures the script is launched with admin rights.
 
-!WizTree must be set to english language, or else the columns in .csv file will be incorrectly named.!
-!No other instance of WizTree can be launched at the same time, because the script waits for WizTree to exit so it can start WizTreeCompare!
+---
+- !WizTree must be set to english language, or else the columns in .csv file will be incorrectly named.!
+- !No other instance of WizTree can be launched at the same time, because the script waits for WizTree to exit so it can start WizTreeCompare!
+---
 
 ## Parameters
 - $wtPath = path to the WizTree .exe
