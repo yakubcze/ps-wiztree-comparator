@@ -1,6 +1,7 @@
 # --------------------------------
 # Jakub Mlynek
 #
+# WizTreeComparator
 # WizTree + WizTreeCompare skript
 # --------------------------------
 
@@ -11,7 +12,7 @@ $scanPath = "\\f-server-v\E" #cesta ke skenovanemu adresari
 $csvFilePath_wt = "C:\wiztree\export\" #cesta kam se budou ukladat exportovane csv soubory pro WizTree
 $csvFileName_wt = "WizTree_$(Get-Date -Format "dd_MM_yyyy_HHmm").csv" #format vystupniho csv souboru pro WizTree
 
-$csvFilePath_wtc = "C:\wiztree\compare\" #cesta kam se budou ukladat exportovoane csv soubor pro WizTreeCompare
+$csvFilePath_wtc = "C:\wiztree\compare\" #cesta kam se budou ukladat exportovane csv soubor pro WizTreeCompare
 #csvFileName_wtc = nize v kodu
 
 try {
@@ -25,6 +26,7 @@ try {
 
     pokud by toto nebylo provedeno, skript by treba na hodinu zamrzl a nic by se nedelo
     #>
+    Write-Host -NoNewLine "Start: $(Get-Date -Format "HH:mm")"
     for($i = 0; $i -le 100; $i = ($i + 1) % 100)
     {
         Write-Progress -Activity "WizTree" -PercentComplete $i -Status "Probiha sken adresare..."
@@ -84,13 +86,3 @@ finally {
         Write-Host "Beh skriptu probehl uspesne"
     }
 }
-
-
-<#
-dopsat nekde nejaky readme soubor:
-- wiztree musi byt v anglictine
-- zdokumentovat vsechny cesty (path) co tu jsou napsane
-- co program dela (proskenuje adresar, porovna ho s predchozi verzi, ...)
-- pokud je ve slozce exports jenom jeden soubor, program spadne ale nic nenapise
-- ctrl+c pro zruseni
-#>
