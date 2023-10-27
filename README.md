@@ -1,5 +1,5 @@
 # wiztree-comparator
-- A very simple script to automatically scan a selected folder, export to .csv and compare it to previous version of the scan
+A very simple script to automatically scan a selected folder, export to .csv and compare it to previous version of the scan
 
 - This script utilizes WizTree and [WizTreeCompare](https://github.com/AlphaDelta/WizTreeCompare). Script scans specified folder using WizTree, exports the result to .csv file to a specific folder. Then WizTreeCompare is launched, which takes the newest .csv file + the 2nd newest from the folder and compares them. The result is again saved in a .csv file in a different specified folder. Folder scan can be interrupted using Ctrl+C. 
 
